@@ -1,0 +1,136 @@
+/* Základné nastavenia */
+:root {
+    --primary-green: #2ecc71;
+    --dark-bg: #1a1a1a;
+    --text-color: #333;
+    --border-color: #ddd;
+    --font-main: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* Hlavička */
+.main-header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--dark-bg);
+    letter-spacing: -1px;
+}
+
+.logo-text span { color: var(--primary-green); }
+
+.slogan {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: -5px;
+}
+
+/* Tlačidlá v navigácii */
+.main-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+/* Vyhľadávanie */
+.search-area { position: relative; }
+
+#search-input {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    outline: none;
+    width: 250px;
+}
+
+/* Layout (4 stĺpce) */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.articles-grid {
+    grid-column: span 3; /* Zaberá 3 stĺpce */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sidebar {
+    grid-column: span 1; /* Zaberá 1 stĺpec */
+}
+
+/* Sidebar Boxy */
+.sidebar-block {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ad-placeholder {
+    background: #f4f4f4;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border: 1px dashed #ccc;
+}
+
+/* Responzivita */
+@media (max-width: 1024px) {
+    .content-wrapper { grid-template-columns: 1fr; }
+    .articles-grid { grid-column: span 1; }
+    .sidebar { grid-column: span 1; }
+    .header-container { flex-direction: column; gap: 20px; text-align: center; }
+}
