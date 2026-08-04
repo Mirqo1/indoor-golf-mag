@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Garmin R10 vs Uneekor Eye XO: Which one is better for Creative Golf?",
+        "slug": "garmin-r10-vs-uneekor-eye-xo-creative-golf",
+        "date": "2024-08-04",
+        "category": "Creative Golf, Garmin, Uneekor",
+        "excerpt": "Discover which launch monitor offers the best integration and accuracy when paired with Creative Golf software.",
+        "thumbnail": "articles/garmin-r10-vs-uneekor-eye-xo-creative-golf/thumb.jpg",
+        "featured": true
+    },
+    {
+        "id": 2,
+        "title": "Top 5 Indoor Golf Simulators for 2024",
+        "slug": "top-5-indoor-golf-simulators-2024",
+        "date": "2024-08-03",
+        "category": "Launch Monitors",
+        "excerpt": "A comprehensive guide to the best golf simulators available this year for every budget.",
+        "thumbnail": "articles/top-5-indoor-golf-simulators-2024/thumb.jpg",
+        "featured": false
+    },
+    {
+        "id": 3,
+        "title": "GSPro Software Review: The New Industry Standard?",
+        "slug": "gspro-software-review",
+        "date": "2024-08-02",
+        "category": "Software",
+        "excerpt": "We take a deep dive into GSPro to see why so many golfers are switching to this platform.",
+        "thumbnail": "articles/gspro-software-review/thumb.jpg",
+        "featured": false
+    }
+]
