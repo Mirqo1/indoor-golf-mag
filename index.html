@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indoor Golf Mag | Expert Reviews & Simulator Guides</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,10 +15,12 @@
                 <h1>INDOOR GOLF <span>MAG</span></h1>
                 <p>Everything you need to know about indoor golf</p>
             </a>
+
             <nav class="nav-buttons">
                 <a href="/launch-monitors/" class="btn-nav">Launch Monitors</a>
                 <a href="/software/" class="btn-nav">Software</a>
             </nav>
+
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Search...">
             </div>
@@ -27,51 +29,55 @@
 
     <main class="container">
         <div class="main-grid">
+            <!-- Časť pre články -->
             <section class="articles-area" id="articles-container">
-                <!-- Articles will be loaded here via JS -->
+                <p>Loading articles...</p>
             </section>
 
+            <!-- Sidebar -->
             <aside class="sidebar">
                 <div class="sidebar-widget">
-                    <h3>Featured Articles</h3>
+                    <h3>Featured</h3>
                     <div id="featured-sidebar"></div>
                 </div>
-                <div class="sidebar-widget ad-placeholder">
-                    <p>Advertisement</p>
+                <div class="sidebar-widget">
+                    <div style="background:#f4f4f4; height:250px; display:flex; align-items:center; justify-content:center; color:#999; border:1px dashed #ccc;">
+                        Advertisement
+                    </div>
                 </div>
             </aside>
         </div>
     </main>
 
     <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h2>INDOOR GOLF <span>MAG</span></h2>
-                <p>Your ultimate source for indoor golf technology. We test, you play.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>INDOOR GOLF <span>MAG</span></h2>
+                    <p>Expert reviews and guides for your indoor game.</p>
+                </div>
+                <div class="footer-nav">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="/launch-monitors/">Launch Monitors</a></li>
+                        <li><a href="/software/">Software</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-nav">
-                <h3>Information</h3>
-                <ul>
-                    <li><a href="/about/">About Us</a></li>
-                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="/contact/">Contact</a></li>
-                </ul>
+            <div style="text-align:center; margin-top:40px; color:#555; font-size:0.8rem; border-top:1px solid #222; padding-top:20px;">
+                &copy; 2024 IndoorGolfMag.com | All Rights Reserved.
             </div>
-            <div class="footer-newsletter">
-                <h3>Newsletter</h3>
-                <p>Get the latest reviews in your inbox.</p>
-                <!-- Placeholder for Newsletter service (MailerLite/Substack) -->
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email..." required>
-                    <button type="submit" class="btn-blue">Join</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 IndoorGolfMag.com | All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
