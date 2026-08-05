@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderAll(articles) {
         renderArticles(articles);
-        renderSidebar(articles.slice(0, 3)); // Top 3 do sidebaru
+        renderSidebar(articles.slice(1, 5)); // Zoberie iné články do sidebaru
     }
 
     function renderArticles(articles) {
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="/articles/${art.slug}/" class="article-card ${isFeatured ? 'featured-article' : ''}">
                     <img src="${art.thumbnail}" class="card-img" alt="${art.title}">
                     <div class="card-content">
-                        <span class="tag">${art.category}</span>
+                        <span class="tag">${art.category.split(',')[0]}</span>
                         <h2>${art.title}</h2>
-                        <p class="excerpt">${art.excerpt}</p>
+                        ${isFeatured ? `<p class="excerpt">${art.excerpt}</p>` : ''}
                     </div>
                 </a>
             `;
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${art.thumbnail}" class="trending-img">
                     <div class="trending-info">
                         <h4>${art.title}</h4>
-                        <span>${art.date}</span>
                     </div>
                 </a>
             `;
