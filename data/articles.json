@@ -1,32 +1,52 @@
 [
     {
         "id": 1,
-        "title": "Garmin R10 vs Uneekor Eye XO: Which one is better for Creative Golf?",
-        "slug": "garmin-r10-vs-uneekor-eye-xo-creative-golf",
-        "date": "2024-08-04",
-        "category": "Creative Golf, Garmin, Uneekor",
-        "excerpt": "Discover which launch monitor offers the best integration and accuracy when paired with Creative Golf software.",
-        "thumbnail": "articles/garmin-r10-vs-uneekor-eye-xo-creative-golf/thumb.jpg",
+        "title": "Garmin R10 vs Uneekor Eye XO: The Ultimate Creative Golf Test",
+        "slug": "garmin-r10-vs-uneekor-eye-xo",
+        "date": "August 4, 2024",
+        "category": "Software, Garmin, Uneekor",
+        "excerpt": "We tested the two most popular launch monitors with Creative Golf software to see which one provides better accuracy and gameplay experience.",
+        "thumbnail": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&q=80&w=800",
         "featured": true
     },
     {
         "id": 2,
-        "title": "Top 5 Indoor Golf Simulators for 2024",
-        "slug": "top-5-indoor-golf-simulators-2024",
-        "date": "2024-08-03",
+        "title": "Best Golf Simulators Under $5000 for 2024",
+        "slug": "best-simulators-under-5000",
+        "date": "August 3, 2024",
         "category": "Launch Monitors",
-        "excerpt": "A comprehensive guide to the best golf simulators available this year for every budget.",
-        "thumbnail": "articles/top-5-indoor-golf-simulators-2024/thumb.jpg",
+        "excerpt": "Building a home golf simulator doesn't have to break the bank. Here are our top picks for budget-friendly setups.",
+        "thumbnail": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
         "featured": false
     },
     {
         "id": 3,
         "title": "GSPro Software Review: The New Industry Standard?",
-        "slug": "gspro-software-review",
-        "date": "2024-08-02",
+        "slug": "gspro-review",
+        "date": "August 2, 2024",
         "category": "Software",
-        "excerpt": "We take a deep dive into GSPro to see why so many golfers are switching to this platform.",
-        "thumbnail": "articles/gspro-software-review/thumb.jpg",
+        "excerpt": "Is GSPro really the best simulator software on the market? We look at the physics, graphics, and course selection.",
+        "thumbnail": "https://images.unsplash.com/photo-1592919016381-99f3ef4e08dd?auto=format&fit=crop&q=80&w=800",
+        "featured": false
+    },
+    {
+        "id": 4,
+        "title": "How to Calibrate Your Launch Monitor for Max Accuracy",
+        "slug": "calibrate-launch-monitor",
+        "date": "August 1, 2024",
+        "category": "Guides",
+        "excerpt": "Small adjustments can lead to big differences in data. Learn how to set up your device perfectly every time.",
+        "thumbnail": "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?auto=format&fit=crop&q=80&w=800",
+        "featured": false
+    },
+    {
+        "id": 5,
+        "title": "The Impact of Lighting on Optical Launch Monitors",
+        "slug": "lighting-impact-monitors",
+        "date": "July 30, 2024",
+        "category": "Launch Monitors",
+        "excerpt": "Why your optical launch monitor might be misreading shots and how the right bulbs can fix it.",
+        "thumbnail": "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800",
         "featured": false
     }
 ]
