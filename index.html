@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indoor Golf Mag | Everything you need to know</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Indoor Golf Mag | Expert Reviews & Simulator Guides</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,12 +15,10 @@
                 <h1>INDOOR GOLF <span>MAG</span></h1>
                 <p>Everything you need to know about indoor golf</p>
             </a>
-
             <nav class="nav-buttons">
                 <a href="/launch-monitors/" class="btn-nav">Launch Monitors</a>
                 <a href="/software/" class="btn-nav">Software</a>
             </nav>
-
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Search...">
             </div>
@@ -29,58 +27,51 @@
 
     <main class="container">
         <div class="main-grid">
-            <!-- Blogová časť -->
             <section class="articles-area" id="articles-container">
-                <!-- Články sa načítajú cez JS -->
+                <!-- Articles will be loaded here via JS -->
             </section>
 
-            <!-- Sidebar -->
             <aside class="sidebar">
                 <div class="sidebar-widget">
                     <h3>Featured Articles</h3>
                     <div id="featured-sidebar"></div>
                 </div>
-
-                <div class="sidebar-widget">
-                    <h3>Latest Reviews</h3>
-                    <div class="ad-box">
-                        Advertisement Area
-                    </div>
+                <div class="sidebar-widget ad-placeholder">
+                    <p>Advertisement</p>
                 </div>
             </aside>
         </div>
     </main>
 
-<footer class="main-footer">
-    <div class="container">
-        <div class="footer-grid">
+    <footer class="main-footer">
+        <div class="container footer-grid">
             <div class="footer-brand">
                 <h2>INDOOR GOLF <span>MAG</span></h2>
-                <p>Expert reviews and guides for your indoor game.</p>
+                <p>Your ultimate source for indoor golf technology. We test, you play.</p>
             </div>
-            <div class="footer-links">
-                <h3>Legal & Info</h3>
+            <div class="footer-nav">
+                <h3>Information</h3>
                 <ul>
                     <li><a href="/about/">About Us</a></li>
                     <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="/terms-of-service/">Terms of Service</a></li>
                     <li><a href="/contact/">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="/launch-monitors/">Launch Monitors</a></li>
-                    <li><a href="/software/">Software</a></li>
-                </ul>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Get the latest reviews in your inbox.</p>
+                <!-- Placeholder for Newsletter service (MailerLite/Substack) -->
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email..." required>
+                    <button type="submit" class="btn-blue">Join</button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 IndoorGolfMag.com. All rights reserved.</p>
+            <p>&copy; 2024 IndoorGolfMag.com | All Rights Reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
