@@ -1,8 +1,7 @@
 :root {
     --primary-blue: #0056b3;
     --text-dark: #1a1a1a;
-    --text-gray: #555;
-    --light-gray: #f4f4f4;
+    --text-light: #ffffff;
     --border-color: #eee;
     --white: #ffffff;
 }
@@ -17,7 +16,7 @@ body {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -60,103 +59,157 @@ body {
     outline: none;
 }
 
-/* Main Layout (4-stĺpcový grid) */
+/* Layout */
 .main-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 40px;
+    margin-bottom: 60px;
 }
 
-/* Hlavná časť s článkami (3 stĺpce) */
 .articles-area {
     grid-column: span 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
-/* Sidebar (1 stĺpec) */
-.sidebar {
-    grid-column: span 1;
-}
+.sidebar { grid-column: span 1; }
 
-/* Karta článku */
+/* Article Card (Obrázok ako podklad) */
 .article-card {
-    background: var(--white);
-    border-radius: 12px;
+    position: relative;
+    height: 300px;
+    border-radius: 15px;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
-    transition: 0.3s;
+    color: var(--text-light);
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.article-card:hover { transform: translateY(-5px); }
+.article-card:hover { transform: scale(1.02); }
 
-.card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; }
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
-.card-content { padding: 15px 5px; }
+/* Gradient na obrázku pre čitateľnosť textu */
+.article-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 3;
+}
 
 .tag {
-    color: var(--primary-blue);
-    font-size: 0.7rem;
+    background: var(--primary-blue);
+    color: white;
+    font-size: 0.65rem;
     font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    display: block;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.article-card h2 { font-size: 1.1rem; margin-bottom: 8px; line-height: 1.4; }
-.article-card p.excerpt { font-size: 0.9rem; color: var(--text-gray); }
+.article-card h2 { font-size: 1.1rem; line-height: 1.3; font-weight: 700; }
+.article-card .excerpt { display: none; } /* V tomto štýle excerpt na kartách často vynechávame */
 
-/* Najnovší článok (Featured) - zaberá 2 stĺpce */
+/* Featured (Veľký článok) */
 .featured-article {
     grid-column: span 2;
+    height: 450px;
 }
-.featured-article .card-img { height: 350px; }
-.featured-article h2 { font-size: 1.8rem; }
 
-/* Sidebar widgety */
+.featured-article h2 { font-size: 1.8rem; }
+.featured-article .excerpt { 
+    display: block; 
+    font-size: 0.95rem; 
+    margin-top: 10px; 
+    opacity: 0.9;
+}
+
+/* Sidebar Styling */
 .sidebar-widget { margin-bottom: 40px; }
 .sidebar-widget h3 {
     font-size: 1.1rem;
     border-bottom: 2px solid var(--text-dark);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .trending-item {
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
     text-decoration: none;
     color: inherit;
+    align-items: center;
 }
-.trending-img { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; }
-.trending-info h4 { font-size: 0.9rem; line-height: 1.2; }
-.trending-info span { font-size: 0.7rem; color: #999; }
+
+.trending-img { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; }
+.trending-info h4 { font-size: 0.85rem; line-height: 1.2; }
 
 .ad-box {
     background: #f9f9f9;
     border: 1px dashed #ccc;
-    height: 300px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #bbb;
+    color: #999;
     font-size: 0.8rem;
 }
+
+/* Footer */
+.main-footer {
+    background: #111;
+    color: white;
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h2 span { color: var(--primary-blue); }
 
 /* Responsive */
 @media (max-width: 1024px) {
     .main-grid { grid-template-columns: 1fr; }
     .articles-area { grid-column: span 1; grid-template-columns: repeat(2, 1fr); }
-    .sidebar { display: none; } /* Na tabletoch schováme pre prehľadnosť */
-    .header-flex { flex-direction: column; gap: 20px; text-align: center; }
-    .nav-buttons { margin-left: 0; }
+    .sidebar { grid-column: span 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .header-flex { flex-direction: column; text-align: center; gap: 15px; }
+    .nav-buttons { margin-left: 0; justify-content: center; }
     .articles-area { grid-template-columns: 1fr; }
-    .featured-article { grid-column: span 1; }
+    .featured-article { grid-column: span 1; height: 350px; }
+    .sidebar { grid-template-columns: 1fr; }
 }
