@@ -5,63 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indoor Golf Mag | Everything you need to know</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="header-container">
-            <!-- Logo a Slogan -->
-            <div class="logo-area">
-                <a href="/" class="logo-text">INDOOR GOLF <span>MAG</span></a>
-                <p class="slogan">Everything you need to know about indoor golf</p>
-            </div>
+        <div class="container header-flex">
+            <a href="/" class="logo-area">
+                <h1>INDOOR GOLF <span>MAG</span></h1>
+                <p>Everything you need to know about indoor golf</p>
+            </a>
 
-            <!-- Hlavné kategórie (Tlačidlá s borderom) -->
-            <nav class="main-nav">
+            <nav class="nav-buttons">
                 <a href="/launch-monitors/" class="btn-nav">Launch Monitors</a>
                 <a href="/software/" class="btn-nav">Software</a>
             </nav>
 
-            <!-- Vyhľadávanie -->
-            <div class="search-area">
-                <input type="text" id="search-input" placeholder="Search articles...">
-                <div id="search-results" class="search-suggestions"></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
             </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="content-wrapper">
-            
-            <!-- Hlavná blogová časť (3 stĺpce široká) -->
-            <section class="articles-grid" id="articles-container">
-                <!-- Tu sa budú zobrazovať články cez JS -->
-                <p>Loading latest indoor golf news...</p>
+        <div class="main-grid">
+            <!-- Blogová časť -->
+            <section class="articles-area" id="articles-container">
+                <!-- Články sa načítajú sem -->
             </section>
 
-            <!-- Sidebar (1 stĺpec široký) -->
+            <!-- Sidebar -->
             <aside class="sidebar">
-                <div class="sidebar-block">
+                <div class="sidebar-widget">
                     <h3>Featured</h3>
-                    <div id="featured-list">
-                        <!-- Priestor pre top články -->
+                    <div id="featured-sidebar">
+                        <!-- Tu budú Trending články -->
                     </div>
                 </div>
 
-                <div class="sidebar-block ad-placeholder">
-                    <p>Advertisement</p>
-                    <!-- Tu pôjde neskôr Google AdSense kód -->
+                <div class="sidebar-widget">
+                    <h3>Latest Reviews</h3>
+                    <div class="ad-box">
+                        Advertisement
+                    </div>
                 </div>
             </aside>
-
         </div>
     </main>
-
-    <footer class="main-footer">
-        <p>&copy; 2024 Indoor Golf Mag. All rights reserved.</p>
-    </footer>
 
     <script src="js/script.js"></script>
 </body>
