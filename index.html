@@ -73,11 +73,15 @@
                 </div>
             </div>
             <div style="text-align:center; margin-top:40px; color:#555; font-size:0.8rem; border-top:1px solid #222; padding-top:20px;">
-                &copy; 2024 IndoorGolfMag.com | All Rights Reserved.
+                &copy; <span id="year"></span> IndoorGolfMag.com | All Rights Reserved.
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Automaticky nastav aktuálny rok v patičke
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
