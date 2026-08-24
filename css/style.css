@@ -93,7 +93,7 @@ body {
 /* Karta článku s obrázkom ako podkladom */
 .article-card {
     position: relative;
-    height: 300px;
+    height: 400px;
     border-radius: 12px;
     overflow: hidden;
     text-decoration: none;
@@ -151,9 +151,9 @@ body {
 /* Featured (veľký článok na 2 stĺpce) */
 .featured-article {
     grid-column: span 2;
-    height: 400px;
 }
 .featured-article h2 { font-size: 1.7rem; }
+
 
 /* Sidebar widgety */
 .sidebar-widget { margin-bottom: 35px; }
