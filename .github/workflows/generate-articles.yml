@@ -1,0 +1,31 @@
+name: Generate Article Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/articles.json'
+      - 'generate-articles.js'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Run article generator
+        run: node generate-articles.js
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add articles/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Generate article pages from articles.json" && git push)
