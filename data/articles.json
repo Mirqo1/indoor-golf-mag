@@ -48,5 +48,15 @@
         "excerpt": "Why your optical launch monitor might be misreading shots and how the right bulbs can fix it.",
         "thumbnail": "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800",
         "featured": false
+    },
+    {
+        "id": 6,
+        "title": "Testovací článok - SkyTrak vs Garmin R10",
+        "slug": "skytrak-vs-garmin-r10-test",
+        "date": "August 25, 2024",
+        "category": "Porovnanie, Launch Monitors",
+        "excerpt": "Detailné porovnanie dvoch najpopulárnejších launch monitorov na trhu. Ktorý je lepší pre vás?",
+        "thumbnail": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&q=80&w=800",
+        "featured": false
     }
 ]
