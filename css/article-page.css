@@ -1,0 +1,162 @@
+/* Štýly pre jednotlivé články */
+
+.article-full {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.article-hero {
+    margin: -20px -20px 40px -20px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 0 0 14px 14px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.article-content {
+    padding: 0 20px;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.article-content .tag {
+    background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.article-content h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.article-content .excerpt {
+    font-size: 1.1rem;
+    color: #1e293b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.article-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+.article-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.btn-back:hover {
+    transform: translateX(-4px);
+    color: #10b981;
+}
+
+/* Odporúčané články */
+.related-articles {
+    margin: 80px 0 40px 0;
+    padding-top: 60px;
+    border-top: 3px solid #e2e8f0;
+}
+
+.related-articles h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+#related-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+#related-container .article-card {
+    height: 300px;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+    .article-hero {
+        height: 300px;
+    }
+    
+    .article-content h1 {
+        font-size: 1.7rem;
+    }
+    
+    #related-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .article-full {
+        margin: 30px 0;
+    }
+    
+    .article-hero {
+        height: 250px;
+        margin: 0 -20px 30px -20px;
+    }
+    
+    .article-content {
+        padding: 0 15px;
+    }
+    
+    .article-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .article-content .excerpt {
+        font-size: 0.95rem;
+    }
+    
+    #related-container {
+        grid-template-columns: 1fr;
+    }
+}
