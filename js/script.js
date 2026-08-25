@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarContainer = document.getElementById('featured-sidebar');
     const searchInput = document.getElementById('search-input');
 
-    fetch('data/articles.json')
+    fetch('/data/articles.json')
         .then(res => res.json())
         .then(data => {
             renderAll(data);
@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
                 renderArticles(filtered);
             });
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+            articlesContainer.innerHTML = '<p>Error loading articles. Please try again later.</p>';
         });
 
     function renderAll(articles) {
@@ -29,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderArticles(articles) {
         articlesContainer.innerHTML = '';
+        if (articles.length === 0) {
+            articlesContainer.innerHTML = '<p>No articles found.</p>';
+            return;
+        }
         articles.forEach((art, index) => {
             const isFeatured = index === 0;
             const card = `
