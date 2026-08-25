@@ -1,0 +1,16 @@
+{
+  "name": "indoor-golf-mag",
+  "version": "1.0.0",
+  "description": "Indoor Golf Magazine - Expert Reviews & Simulator Guides",
+  "main": "generate-articles.js",
+  "scripts": {
+    "generate": "node generate-articles.js",
+    "watch": "nodemon generate-articles.js"
+  },
+  "keywords": ["golf", "simulator", "launch-monitor"],
+  "author": "Mirqo1",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
